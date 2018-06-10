@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_edits">Edit</string>
+    <string name="action_deletes">Delete</string>
+    <string name="action_searchs">Search</string>
+    <string name="title_toolbar">WEADIFY</string>
+</resources>

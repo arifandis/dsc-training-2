@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@color/grey">
+
+    <RelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:id="@+id/weather_img_id"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="24dp"
+            android:src="@mipmap/ic_cloudly" />
+
+        <TextView
+            android:id="@+id/city_name_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/weather_img_id"
+            android:layout_below="@+id/weather_img_id"
+            android:fontFamily="@font/gothic"
+            android:text="Nganjuk"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/country_name_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/weather_img_id"
+            android:layout_below="@+id/city_name_id"
+            android:fontFamily="@font/gothic"
+            android:text="Indonesia"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/country_name_id"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="34dp"
+            android:fontFamily="@font/gothic"
+            android:text="25°"
+            android:textColor="@color/white"
+            android:textSize="80sp" />
+
+        <TextView
+            android:id="@+id/hello_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/city_name_id"
+            android:layout_marginTop="187dp"
+            android:fontFamily="@font/gothic"
+            android:text="Morning Fandis..."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ask_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/city_name_id"
+            android:layout_below="@+id/hello_id"
+            android:fontFamily="@font/gothic"
+            android:text="Can we see a movie today?"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/weather_img_id"
+            android:layout_below="@+id/ask_id"
+            android:fontFamily="@font/gothic"
+            android:text="Last searches"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="80dp"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/weather_recycler_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_content"/>
+
+</RelativeLayout>
